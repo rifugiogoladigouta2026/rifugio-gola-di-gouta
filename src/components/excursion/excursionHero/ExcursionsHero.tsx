@@ -9,8 +9,7 @@ export default function ExcursionsHero() {
       <Box
         className={styles.heroBg}
         style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80)",
+          backgroundImage: "url(/images/excursions/escursioni2.jpeg)",
         }}
       />
       <Box className={styles.heroOverlay} />

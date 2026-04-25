@@ -2,9 +2,34 @@
 
 import { Box, Typography, Container, Grid } from "@mui/material";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./ExcursionsContent.module.scss";
 import { categorie, servizi } from "../excursionsConfig";
 import { socials } from "@/lib/utils";
+
+const excursionGallery = [
+  {
+    src: "/images/excursions/escursioni1.jpeg",
+    alt: "Gruppo in cammino lungo un sentiero nel bosco",
+    title: "Sentieri guidati",
+    description: "Cammini nel verde tra ombra, respiro e racconti del territorio.",
+    className: "galleryCardPrimary",
+  },
+  {
+    src: "/images/excursions/escursioni2.jpeg",
+    alt: "Pozza d'acqua limpida con piccola cascata nel bosco",
+    title: "Pause rigeneranti",
+    description: "Angoli d'acqua e luce che rendono ogni escursione ancora piu speciale.",
+    className: "galleryCardWide",
+  },
+  {
+    src: "/images/excursions/escursioni3.jpeg",
+    alt: "Escursionisti che salgono lungo un sentiero di montagna nel bosco",
+    title: "Percorsi autentici",
+    description: "Itinerari veri, adatti a chi cerca natura, movimento e silenzio.",
+    className: "galleryCardTall",
+  },
+];
 
 export default function ExcursionsContent() {
   return (
@@ -31,6 +56,32 @@ export default function ExcursionsContent() {
             Ogni percorso si conclude con una sosta rigenerante al rifugio, dove potrete gustare i
             sapori genuini della nostra cucina.
           </Typography>
+        </Box>
+
+        <Box className={styles.gallerySection}>
+          <Box className={styles.galleryGrid}>
+            {excursionGallery.map((photo) => (
+              <Box
+                key={photo.src}
+                className={`${styles.galleryCard} ${styles[photo.className]}`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                  className={styles.galleryImage}
+                />
+                <Box className={styles.galleryOverlay} />
+                <Box className={styles.galleryCaption}>
+                  <Typography className={styles.galleryTitle}>{photo.title}</Typography>
+                  <Typography className={styles.galleryDescription}>
+                    {photo.description}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+          </Box>
         </Box>
 
         <Box className={styles.labelRow}>
