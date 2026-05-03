@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $teal-dark:  #0d5c63;
 $teal-light: #4aadaa;
 $cream:      #e8e4df;
@@ -32,7 +34,7 @@ $black:      #0a0a0a;
   background: linear-gradient(
     150deg,
     rgba($teal-dark, 0.85) 0%,
-    rgba(darken($teal-dark, 10%), 0.9) 100%
+    rgba(color.adjust($teal-dark, $lightness: -10%), 0.9) 100%
   );
 }
 

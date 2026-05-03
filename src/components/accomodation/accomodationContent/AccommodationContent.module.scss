@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $teal-dark:  #0d5c63;
 $teal-light: #4aadaa;
 $cream:      #e8e4df;
@@ -479,7 +481,7 @@ $gray:       #6b7280;
 
 .ctaBlock {
   position: relative;
-  background: linear-gradient(150deg, $teal-dark 0%, darken($teal-dark, 10%) 100%);
+  background: linear-gradient(150deg, $teal-dark 0%, color.adjust($teal-dark, $lightness: -10%) 100%);
   border-radius: 8px;
   overflow: hidden;
   padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
@@ -551,7 +553,7 @@ $gray:       #6b7280;
   transition: all 200ms ease;
 
   &:hover {
-    background: lighten($teal-light, 6%);
+    background: color.adjust($teal-light, $lightness: 6%);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba($teal-light, 0.35);
   }
