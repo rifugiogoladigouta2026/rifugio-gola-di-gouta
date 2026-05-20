@@ -141,6 +141,15 @@ export default function Footer() {
 
         <Divider className={styles.divider} />
 
+        <Box className={styles.legalBar}>
+          <Typography className={styles.legalNote}>
+            Rifugio Gola di Gouta di Valeriano Candido — Regione Gouta, snc Pigna (IM) — P.IVA 01831280084
+          </Typography>
+          <Typography className={styles.legalNote}>
+            CIN: IT008043B81W6QEHND — Codice Identificativo Regionale (CIR): 008043-RIF-0004
+          </Typography>
+        </Box>
+
         <Box className={styles.bottomBar}>
           <Typography className={styles.copyright}>
             © {YEAR} Rifugio Gouta — Tutti i diritti riservati

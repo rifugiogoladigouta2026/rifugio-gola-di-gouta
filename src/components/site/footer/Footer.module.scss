@@ -191,6 +191,21 @@ $black:      #0a0a0a;
   margin: 0 !important;
 }
 
+.legalBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 1rem 0 0.5rem;
+  text-align: center;
+}
+
+.legalNote {
+  font-size: 0.72rem !important;
+  color: rgba($cream, 0.35) !important;
+  line-height: 1.6 !important;
+}
+
 .bottomBar {
   display: flex;
   align-items: center;
