@@ -30,7 +30,7 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const menuNumbers = ["01", "02", "03", "04", "05", "06"];
+const menuNumbers = navLinks.map((_, i) => String(i + 1).padStart(2, "0"));
 
 const YEAR = new Date().getFullYear();
 
@@ -196,8 +196,15 @@ export default function Header() {
                       disableRipple
                       className={`${s.navItem} ${active ? s.navItemActive : ""} ${isDimmed ? s.navItemDimmed : ""}`}
                       onClick={() => {
-                        router.push(link.href);
-                        setOpen(false);
+                        if (link.href.startsWith('#')) {
+                          setOpen(false);
+                          setTimeout(() => {
+                            document.getElementById(link.href.slice(1))?.scrollIntoView({ behavior: 'smooth' });
+                          }, 350);
+                        } else {
+                          router.push(link.href);
+                          setOpen(false);
+                        }
                       }}
                       onMouseEnter={() => setHoveredIndex(i)}
                       onMouseLeave={() => setHoveredIndex(null)}

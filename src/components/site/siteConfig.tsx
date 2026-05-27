@@ -4,5 +4,5 @@ export const navLinks = [
   { href: "/dormire", label: "Dormire" },
   { href: "/mangiare", label: "Mangiare" },
   { href: "/escursioni", label: "Escursioni" },
-  { href: "/#contatti", label: "Contatti" },
+  { href: "#contatti", label: "Contatti" },
 ];

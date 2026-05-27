@@ -1,9 +1,5 @@
-$teal-dark:  #0d5c63;
-$teal-light: #4aadaa;
-$cream:      #e8e4df;
-$white:      #ffffff;
-$black:      #0a0a0a;
-@use "sass:color";
+@use '../../../styles/variables' as *;
+@use 'sass:color';
 
 .appBar {
   background: $teal-dark !important;
@@ -110,9 +106,9 @@ $black:      #0a0a0a;
   }
 }
 
-.ig:hover { border-color: rgba(225,48,108,0.7) !important; color: rgba(225,48,108,1) !important; background: rgba(225,48,108,0.08) !important; }
-.fb:hover { border-color: rgba(24,119,242,0.7) !important; color: rgba(24,119,242,1) !important; background: rgba(24,119,242,0.08) !important; }
-.wa:hover { border-color: rgba(37,211,102,0.7) !important; color: rgba(37,211,102,1) !important; background: rgba(37,211,102,0.08) !important; }
+.ig:hover { border-color: rgba($color-instagram, 0.7) !important; color: $color-instagram !important; background: rgba($color-instagram, 0.08) !important; }
+.fb:hover { border-color: rgba($color-facebook, 0.7) !important; color: $color-facebook !important; background: rgba($color-facebook, 0.08) !important; }
+.wa:hover { border-color: rgba($color-whatsapp, 0.7) !important; color: $color-whatsapp !important; background: rgba($color-whatsapp, 0.08) !important; }
 
 .menuBtn {
   display: flex !important;

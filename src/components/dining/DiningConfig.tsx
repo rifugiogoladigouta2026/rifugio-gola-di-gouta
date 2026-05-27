@@ -19,38 +19,6 @@ export const quando = [
   },
 ];
 
-export const menuEsempio = [
-  {
-    categoria: "Antipasti",
-    piatti: [
-      { nome: "[Piatto da definire]", desc: "Prodotto locale · stagionale" },
-      { nome: "[Piatto da definire]", desc: "Prodotto locale · stagionale" },
-    ],
-  },
-  {
-    categoria: "Primi",
-    piatti: [
-      { nome: "[Piatto da definire]", desc: "Prodotto locale · stagionale" },
-      { nome: "[Piatto da definire]", desc: "Prodotto locale · stagionale" },
-      { nome: "[Piatto da definire]", desc: "Prodotto locale · stagionale" },
-    ],
-  },
-  {
-    categoria: "Secondi",
-    piatti: [
-      { nome: "[Piatto da definire]", desc: "Prodotto locale · stagionale" },
-      { nome: "[Piatto da definire]", desc: "Prodotto locale · stagionale" },
-    ],
-  },
-  {
-    categoria: "Dolci",
-    piatti: [
-      { nome: "[Piatto da definire]", desc: "Prodotto locale · stagionale" },
-      { nome: "[Piatto da definire]", desc: "Prodotto locale · stagionale" },
-    ],
-  },
-];
-
 export const valoriCucina = [
   {
     icon: "🌿",

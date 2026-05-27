@@ -1,10 +1,7 @@
-$teal-dark:  #0d5c63;
-$teal-light: #4aadaa;
-$cream:      #e8e4df;
-$white:      #ffffff;
-$black:      #0a0a0a;
-$gray:       #6b7280;
-@use "sass:color";
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+@use 'sass:color';
+
 .section {
   position: relative;
   background-color: $white;
@@ -128,18 +125,11 @@ $gray:       #6b7280;
 }
 
 .menuNotice {
-  background: rgba($teal-light, 0.06);
-  border: 1px solid rgba($teal-light, 0.2);
-  border-left: 3px solid $teal-light;
-  border-radius: 4px;
-  padding: 1.1rem 1.5rem;
-  margin-bottom: 2.5rem;
+  @include note-card(1.1rem 1.5rem, 2.5rem);
 }
 
 .menuNoticeText {
-  font-size: 0.85rem !important;
-  line-height: 1.65 !important;
-  color: $gray !important;
+  @include note-text(0.85rem);
 }
 
 .menuCard {
@@ -240,23 +230,12 @@ $gray:       #6b7280;
 }
 
 .intoleranceNote {
-  background: rgba($teal-light, 0.06);
-  border: 1px solid rgba($teal-light, 0.2);
-  border-left: 3px solid $teal-light;
-  border-radius: 4px;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: clamp(3.5rem, 7vw, 6rem);
+  @include note-card(1.25rem 1.5rem, clamp(3.5rem, 7vw, 6rem));
 }
 
 .intoleranceText {
-  font-size: 0.9rem !important;
-  line-height: 1.65 !important;
-  color: $gray !important;
-
-  strong {
-    color: $teal-dark;
-    font-weight: 700;
-  }
+  @include note-text;
+  strong { color: $teal-dark; font-weight: 700; }
 }
 
 .ctaBlock {
@@ -327,61 +306,20 @@ $gray:       #6b7280;
 }
 
 .ctaBtnPrimary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.9rem 1.75rem;
-  background: $teal-light;
-  color: $white;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 3px;
-  transition: all 200ms ease;
-
-  &:hover {
-    background: color.adjust($teal-light, $lightness: 6%);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba($teal-light, 0.35);
-  }
+  @include cta-btn-primary;
 }
+
 .pranzoNote {
-  background: rgba($teal-light, 0.06);
-  border: 1px solid rgba($teal-light, 0.2);
-  border-left: 3px solid $teal-light;
-  border-radius: 4px;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 0.5rem;
+  @include note-card(1.25rem 1.5rem, 0.5rem);
 }
 
 .pranzoText {
-  font-size: 0.9rem !important;
-  line-height: 1.6 !important;
-  color: $gray !important;
-
-  strong {
-    color: $teal-dark;
-    font-weight: 700;
-  }
+  @include note-text(0.9rem, 1.6);
+  strong { color: $teal-dark; font-weight: 700; }
 }
 
 .ctaBtnSecondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba($cream, 0.65);
-  text-decoration: none;
-  transition: color 200ms ease;
-
-  &:hover {
-    color: $teal-light;
-  }
+  @include cta-btn-secondary;
 }
 
 .menuCardHeader {

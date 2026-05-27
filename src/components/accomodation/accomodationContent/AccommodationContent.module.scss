@@ -1,11 +1,6 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 @use 'sass:color';
-
-$teal-dark:  #0d5c63;
-$teal-light: #4aadaa;
-$cream:      #e8e4df;
-$white:      #ffffff;
-$black:      #0a0a0a;
-$gray:       #6b7280;
 
 .section {
   position: relative;
@@ -110,18 +105,11 @@ $gray:       #6b7280;
 }
 
 .bambiniNote {
-  background: rgba($teal-light, 0.06);
-  border: 1px solid rgba($teal-light, 0.2);
-  border-left: 3px solid $teal-light;
-  border-radius: 4px;
-  padding: 1rem 1.25rem;
+  @include note-card(1rem 1.25rem);
 }
 
 .bambiniText {
-  font-size: 0.85rem !important;
-  line-height: 1.6 !important;
-  color: $gray !important;
-
+  @include note-text(0.85rem, 1.6);
   strong { color: $teal-dark; font-weight: 700; }
 }
 
@@ -538,38 +526,9 @@ $gray:       #6b7280;
 }
 
 .ctaBtnPrimary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.9rem 1.75rem;
-  background: $teal-light;
-  color: $white;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 3px;
-  transition: all 200ms ease;
-
-  &:hover {
-    background: color.adjust($teal-light, $lightness: 6%);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba($teal-light, 0.35);
-  }
+  @include cta-btn-primary;
 }
 
 .ctaBtnSecondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba($cream, 0.65);
-  text-decoration: none;
-  transition: color 200ms ease;
-
-  &:hover { color: $teal-light; }
+  @include cta-btn-secondary;
 }

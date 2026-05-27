@@ -1,10 +1,5 @@
+@use '../../../styles/variables' as *;
 @use 'sass:color';
-
-$teal-dark:  #0d5c63;
-$teal-light: #4aadaa;
-$cream:      #e8e4df;
-$white:      #ffffff;
-$black:      #0a0a0a;
 
 .hero {
   position: relative;

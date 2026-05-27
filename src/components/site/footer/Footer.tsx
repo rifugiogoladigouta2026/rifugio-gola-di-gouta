@@ -26,7 +26,7 @@ const contacts = [
     text: "Sella di Gouta, Pigna (IM) — Liguria",
   },
   { icon: <PhoneIcon fontSize="small" />, text: "+39 348 030 5996" },
-  { icon: <EmailIcon fontSize="small" />, text: "rifugiogoladigouta2026@gmail.com " },
+  { icon: <EmailIcon fontSize="small" />, text: "rifugiogoladigouta2026@gmail.com" },
 ];
 
 const YEAR = new Date().getFullYear();
@@ -104,16 +104,18 @@ export default function Footer() {
           <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Typography className={styles.colTitle}>Esplora</Typography>
             <Box className={styles.linkList}>
-              {navLinks.map((l) => (
-                <a key={l.label} href={l.href} className={styles.link}>
-                  <span className={styles.linkArrow}>→</span>
-                  {l.label}
-                </a>
-              ))}
+              {navLinks
+                .filter((l) => l.label !== "Contatti")
+                .map((l) => (
+                  <a key={l.label} href={l.href} className={styles.link}>
+                    <span className={styles.linkArrow}>→</span>
+                    {l.label}
+                  </a>
+                ))}
             </Box>
           </Grid>
 
-          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} id="contatti">
             <Typography className={styles.colTitle}>Contatti</Typography>
             <Box className={styles.contactList}>
               {contacts.map((c) => (

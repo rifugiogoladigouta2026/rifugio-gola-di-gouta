@@ -1,8 +1,4 @@
-$teal-dark:  #0d5c63;
-$teal-light: #4aadaa;
-$cream:      #e8e4df;
-$white:      #ffffff;
-$black:      #0a0a0a;
+@use '../../../styles/variables' as *;
 
 $slide-duration:    6000ms;
 $fade-duration:     1200ms;
